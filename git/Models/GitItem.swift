@@ -10,7 +10,15 @@ struct GitItem:Codable {
     let language:String?
     let htmlUrl:String
     let createdAt:String
+    let owner:Owner?
+    
  
+}
+
+struct Owner:Codable {
+    let avatarUrl:String?
+    
+    
 }
 
 extension GitItem {

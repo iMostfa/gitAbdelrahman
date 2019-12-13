@@ -8,6 +8,7 @@
 
 import UIKit
 import Lottie
+import SkeletonView
 class ViewController: UIViewController,Storyboarded  {
     private var fullDataSource = [GitItem]()
     weak var coordinator: MainCoordinator?
@@ -58,7 +59,7 @@ class ViewController: UIViewController,Storyboarded  {
 
     //MARK: Fetch data model
     private func GetDataModel() {
-        GitDataDownloader.shared.downloadRepos(for: "JohnSundell") { (items, error) in
+        GitDataDownloader.shared.downloadRepos(for: "vsouza") { (items, error) in
             if error == .noConnection {
                //TODO: ADD NO Connection alert
                 
@@ -70,8 +71,7 @@ class ViewController: UIViewController,Storyboarded  {
             self.paginationDatSource = Array(items![0...6])
             self.updateTable()
         }
-        
-        
+
     }
 
 }
@@ -86,10 +86,11 @@ extension ViewController:UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GitCell") as! GitItemTableViewCell
-        let number:Int = indexPath.row%4
         let repo = paginationDatSource[indexPath.row]
         
-        cell.configureForRepo(with: repo.name, description: repo.description ?? "No description", forkNumber: repo.forksCount,repoImage:UIImage(named: "\(number)")!,date: repo.formattedDate(),language: repo.language)
+        cell.configureForRepo(with: repo.name, description: repo.description ?? "No description", forkNumber: repo.forksCount,date: repo.formattedDate(),language: repo.language)
+    
+        cell.backImage.loadImage(urlString: repo.owner?.avatarUrl)
         
         return cell
    }

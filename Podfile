@@ -7,6 +7,7 @@ target 'git' do
 
   # Pods for git
 pod 'lottie-ios'
+pod "SkeletonView"
 
 
   target 'gitTests' do

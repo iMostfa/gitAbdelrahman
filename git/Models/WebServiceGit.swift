@@ -14,16 +14,9 @@ class GitDataDownloader: GithubApiClient{
    
     func downloadRepos(for user:String, completionHandler: @escaping (_ items:[GitItem]?, _ error: GitNetworkError?) -> Void) {
 
-
-
-
-
                  let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
 
-
-
-                
                 let api = "https://api.github.com/users/\(user)/repos"
                 guard let url = URL(string: api) else {return}
                 var request =  URLRequest(url: url)
@@ -32,9 +25,7 @@ class GitDataDownloader: GithubApiClient{
                
         URLSession.shared.dataTask(with: request) { (data, response, err) in
             guard let data = data else { completionHandler(nil,.noConnection);return }
-                    
 
-                 
                     do{
                         let items =  try decoder.decode(Array<GitItem>.self, from: data)
                         completionHandler(items,nil)
@@ -46,18 +37,9 @@ class GitDataDownloader: GithubApiClient{
                     }
 
                 }.resume()
-                
-                
-        
-        
-        
-        
+       
     }
-    
-    
-    
-    
-    
+  
 }
 
 

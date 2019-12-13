@@ -29,13 +29,12 @@ class GitItemTableViewCell: UITableViewCell {
     }
 
     
-    
-    func configureForRepo(with name:String, description:String,forkNumber:Int,repoImage:UIImage,date:String,language:String?){
+  
+    func configureForRepo(with name:String, description:String,forkNumber:Int,date:String,language:String?){
       
         rpeoName.text = name
         repoDescription.text = description
         forksNumber.text = String(forkNumber)
-        backImage.image = repoImage
         let languageString = language != nil ? " 💻: Written in \(language!)" : "language not specified 😭"
         repoDescription.text =  repoDescription.text! + " \n 🗓: Was created at \(date) \n" + languageString
 
