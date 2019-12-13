@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import MarqueeLabel
 
 class GitItemTableViewCell: UITableViewCell {
 
     @IBOutlet weak var backImage: UIImageView!
     @IBOutlet weak var textBackView: UIView!
-    @IBOutlet weak var rpeoName: UILabel!
+    @IBOutlet weak var rpeoName: MarqueeLabel!
     @IBOutlet weak var repoDescription: UILabel!
     @IBOutlet weak var forksNumber: UILabel!
     override func awakeFromNib() {

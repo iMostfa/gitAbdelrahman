@@ -8,6 +8,7 @@ target 'git' do
   # Pods for git
 pod 'lottie-ios'
 pod "SkeletonView"
+pod 'MarqueeLabel'
 
 
   target 'gitTests' do
@@ -17,9 +18,8 @@ pod "SkeletonView"
 
 pod 'Mockingjay'
 pod 'Quick'
-    pod 'Nimble'
+pod 'Nimble'
 pod 'Hippolyte'
-
   end
 
 end

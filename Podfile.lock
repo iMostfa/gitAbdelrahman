@@ -1,6 +1,7 @@
 PODS:
   - Hippolyte (1.1.0)
   - lottie-ios (3.1.5)
+  - MarqueeLabel (4.0.0)
   - Mockingjay (2.0.1):
     - Mockingjay/Core (= 2.0.1)
     - Mockingjay/XCTest (= 2.0.1)
@@ -16,6 +17,7 @@ PODS:
 DEPENDENCIES:
   - Hippolyte
   - lottie-ios
+  - MarqueeLabel
   - Mockingjay
   - Nimble
   - Quick
@@ -25,6 +27,7 @@ SPEC REPOS:
   trunk:
     - Hippolyte
     - lottie-ios
+    - MarqueeLabel
     - Mockingjay
     - Nimble
     - Quick
@@ -34,12 +37,13 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Hippolyte: a295da386260477d164529b7b18a07adc6175240
   lottie-ios: 32bf84389337d86fbc8b12266e88452e0abf1dee
+  MarqueeLabel: b55b26e690b6ad41faedd95cbf5eae6f1d1735b4
   Mockingjay: 11a621880d2887f1775bdcf824341eb68f218450
   Nimble: 18d5360282923225d62b09d781f63abc1a0111fc
   Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
   SkeletonView: bb27c39857e5492136f02ee8a3aa78de55d12ecd
   URITemplate: ace0c4c46dcf8afe6e89b4060621852886b15c3b
 
-PODFILE CHECKSUM: 5ed0b06b531e0910f4021d44bd17ebcfce417bb3
+PODFILE CHECKSUM: 1659e2755b31d186aa80594daa6eb780cc45c4a2
 
 COCOAPODS: 1.8.1
