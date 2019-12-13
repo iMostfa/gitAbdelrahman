@@ -59,7 +59,7 @@ class ViewController: UIViewController,Storyboarded  {
 
     //MARK: Fetch data model
     private func GetDataModel() {
-        GitDataDownloader.shared.downloadRepos(for: "vsouza") { (items, error) in
+        GitDataDownloader.shared.downloadRepos(for: "AFNetworking") { (items, error) in
             if error == .noConnection {
                //TODO: ADD NO Connection alert
                 
